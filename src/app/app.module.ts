@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { CountdownModule, CountdownGlobalConfig } from 'ngx-countdown';
 
@@ -28,7 +29,7 @@ function countdownConfigFactory(): CountdownGlobalConfig {
     LongBreakComponent,
     SettingComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CountdownModule],
+  imports: [BrowserModule, AppRoutingModule, CountdownModule, FormsModule],
   providers: [
     { provide: CountdownGlobalConfig, useFactory: countdownConfigFactory },
     TimerconfigService,

@@ -21,4 +21,18 @@ export class TimerconfigService {
   getLongBreakTime(): number {
     return this.longBreakTime;
   }
+
+  upDateConfig(focusTime, shortBreakTime, longBreakTime): void {
+    focusTime === undefined
+      ? (this.focusTime = 25)
+      : (this.focusTime = focusTime);
+
+    shortBreakTime === undefined
+      ? (this.shortBreakTime = 5)
+      : (this.shortBreakTime = shortBreakTime);
+
+    longBreakTime === undefined
+      ? (this.longBreakTime = 15)
+      : (this.longBreakTime = longBreakTime);
+  }
 }
