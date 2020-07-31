@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngpomodoro"
+    }
+  },
+  "defaultProject": "ngpomodoro",
+  "cli": {
+    "analytics": false
+  }
 }
