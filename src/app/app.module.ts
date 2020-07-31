@@ -6,19 +6,22 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { FocusComponent } from './pages/focus/focus.component';
+import { ShortBreakComponent } from './pages/short-break/short-break.component';
+import { LongBreakComponent } from './pages/long-break/long-break.component';
+import { SettingComponent } from './pages/setting/setting.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavbarComponent,
-    FocusComponent
+    FocusComponent,
+    ShortBreakComponent,
+    LongBreakComponent,
+    SettingComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
