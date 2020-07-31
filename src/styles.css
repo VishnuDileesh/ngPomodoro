@@ -15,7 +15,11 @@ a:hover {
   border-bottom: 2px solid #4b004c;
 }
 
-a:focus {
+/* a:focus {
+  border-bottom: 2px solid #4b004c;
+} */
+
+.active-link {
   border-bottom: 2px solid #4b004c;
 }
 
@@ -40,8 +44,21 @@ a:focus {
 button {
   outline: none;
   border: none;
+  background-color: #4b004c;
 }
 
-.controls button {
+button:focus {
+  outline: none;
+  border: none;
   background-color: #4b004c;
+}
+
+button:hover {
+  outline: none;
+  border: none;
+  background-color: #4b004c;
+}
+
+input:focus {
+  border: 1px solid #4b004c;
 }
