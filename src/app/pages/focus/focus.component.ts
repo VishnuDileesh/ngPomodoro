@@ -16,6 +16,8 @@ export class FocusComponent implements OnInit {
     this.time = this.timeConfigService.getFocusTime();
     this.timeConfig = {
       leftTime: this.time * 60,
+      format: `mm:ss`,
+      demand: true,
     };
   }
 }

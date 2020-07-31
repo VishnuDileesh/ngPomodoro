@@ -16,6 +16,8 @@ export class LongBreakComponent implements OnInit {
     this.time = this.timerConfigService.getLongBreakTime();
     this.timeConfig = {
       leftTime: this.time * 60,
+      format: `mm:ss`,
+      demand: true,
     };
   }
 }

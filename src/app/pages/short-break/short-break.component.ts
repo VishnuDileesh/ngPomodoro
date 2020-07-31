@@ -16,6 +16,8 @@ export class ShortBreakComponent implements OnInit {
     this.time = this.timerConfigService.getShortBreakTime();
     this.timeConfig = {
       leftTime: this.time * 60,
+      format: `mm:ss`,
+      demand: true,
     };
   }
 }

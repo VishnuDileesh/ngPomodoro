@@ -15,9 +15,9 @@ import { SettingComponent } from './pages/setting/setting.component';
 
 import { TimerconfigService } from './timerconfig.service';
 
-function countdownConfigFactory(): CountdownGlobalConfig {
-  return { format: `mm:ss`, demand: true };
-}
+// function countdownConfigFactory(): CountdownGlobalConfig {
+//   return { format: `mm:ss`, demand: true };
+// }
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ function countdownConfigFactory(): CountdownGlobalConfig {
   ],
   imports: [BrowserModule, AppRoutingModule, CountdownModule, FormsModule],
   providers: [
-    { provide: CountdownGlobalConfig, useFactory: countdownConfigFactory },
+    // { provide: CountdownGlobalConfig, useFactory: countdownConfigFactory },
     TimerconfigService,
   ],
   bootstrap: [AppComponent],
