@@ -3,13 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-focus',
   templateUrl: './focus.component.html',
-  styleUrls: ['./focus.component.css']
+  styleUrls: ['./focus.component.css'],
 })
 export class FocusComponent implements OnInit {
+  time: number = 10 * 60;
+  timeConfig: any = {
+    leftTime: this.time,
+  };
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

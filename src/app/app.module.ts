@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { CountdownModule, CountdownGlobalConfig } from 'ngx-countdown';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -9,6 +11,10 @@ import { FocusComponent } from './pages/focus/focus.component';
 import { ShortBreakComponent } from './pages/short-break/short-break.component';
 import { LongBreakComponent } from './pages/long-break/long-break.component';
 import { SettingComponent } from './pages/setting/setting.component';
+
+function countdownConfigFactory(): CountdownGlobalConfig {
+  return { format: `mm:ss`, demand: false };
+}
 
 @NgModule({
   declarations: [
@@ -20,8 +26,10 @@ import { SettingComponent } from './pages/setting/setting.component';
     LongBreakComponent,
     SettingComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, CountdownModule],
+  providers: [
+    { provide: CountdownGlobalConfig, useFactory: countdownConfigFactory },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

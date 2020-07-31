@@ -2,6 +2,8 @@ nav {
   margin: 5rem 0;
   width: 100%;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
 
 ul {
