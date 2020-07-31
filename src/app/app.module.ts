@@ -14,6 +14,8 @@ import { LongBreakComponent } from './pages/long-break/long-break.component';
 import { SettingComponent } from './pages/setting/setting.component';
 
 import { TimerconfigService } from './timerconfig.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 // function countdownConfigFactory(): CountdownGlobalConfig {
 //   return { format: `mm:ss`, demand: true };
@@ -29,7 +31,7 @@ import { TimerconfigService } from './timerconfig.service';
     LongBreakComponent,
     SettingComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CountdownModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, CountdownModule, FormsModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [
     // { provide: CountdownGlobalConfig, useFactory: countdownConfigFactory },
     TimerconfigService,
