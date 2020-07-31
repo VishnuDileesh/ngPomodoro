@@ -7,6 +7,7 @@ export class TimerconfigService {
   focusTime = 25;
   shortBreakTime = 5;
   longBreakTime = 15;
+  notifySound = new Audio('assets/notifysound.mp3');
 
   constructor() {}
 
@@ -34,5 +35,9 @@ export class TimerconfigService {
     longBreakTime === undefined
       ? (this.longBreakTime = 15)
       : (this.longBreakTime = longBreakTime);
+  }
+
+  playNotification(): void {
+    this.notifySound.play();
   }
 }

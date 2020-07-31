@@ -10,14 +10,21 @@ export class FocusComponent implements OnInit {
   time;
   timeConfig: any;
 
-  constructor(private timeConfigService: TimerconfigService) {}
+  constructor(private timerConfigService: TimerconfigService) {}
 
   ngOnInit(): void {
-    this.time = this.timeConfigService.getFocusTime();
+    this.time = this.timerConfigService.getFocusTime();
     this.timeConfig = {
       leftTime: this.time * 60,
       format: `mm:ss`,
       demand: true,
     };
+  }
+
+  handleEvent(event): any {
+    // console.log(event.status);
+    if (event.status === 3) {
+      this.timerConfigService.playNotification();
+    }
   }
 }

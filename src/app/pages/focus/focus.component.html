@@ -1,4 +1,8 @@
-<countdown #focusTimer [config]="timeConfig"></countdown>
+<countdown
+  #focusTimer
+  [config]="timeConfig"
+  (event)="handleEvent($event)"
+></countdown>
 <div class="controls">
   <button (click)="focusTimer.resume()">Start</button>
   <button (click)="focusTimer.restart()">Reset</button>

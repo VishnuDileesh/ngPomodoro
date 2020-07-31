@@ -1,4 +1,8 @@
-<countdown #shortBreakTimer [config]="timeConfig"></countdown>
+<countdown
+  #shortBreakTimer
+  [config]="timeConfig"
+  (event)="handleEvent($event)"
+></countdown>
 <div class="controls">
   <button (click)="shortBreakTimer.resume()">Start</button>
   <button (click)="shortBreakTimer.restart()">Reset</button>

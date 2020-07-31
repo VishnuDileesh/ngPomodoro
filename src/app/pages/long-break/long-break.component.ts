@@ -20,4 +20,11 @@ export class LongBreakComponent implements OnInit {
       demand: true,
     };
   }
+
+  handleEvent(event): any {
+    // console.log(event.status);
+    if (event.status === 3) {
+      this.timerConfigService.playNotification();
+    }
+  }
 }
