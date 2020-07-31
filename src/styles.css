@@ -14,3 +14,18 @@ body {
   font-size: 18rem;
   color: #4b004c;
 }
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.controls button {
+  background-color: #4b004c;
+}

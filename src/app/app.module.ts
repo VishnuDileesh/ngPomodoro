@@ -12,8 +12,10 @@ import { ShortBreakComponent } from './pages/short-break/short-break.component';
 import { LongBreakComponent } from './pages/long-break/long-break.component';
 import { SettingComponent } from './pages/setting/setting.component';
 
+import { TimerconfigService } from './timerconfig.service';
+
 function countdownConfigFactory(): CountdownGlobalConfig {
-  return { format: `mm:ss`, demand: false };
+  return { format: `mm:ss`, demand: true };
 }
 
 @NgModule({
@@ -29,6 +31,7 @@ function countdownConfigFactory(): CountdownGlobalConfig {
   imports: [BrowserModule, AppRoutingModule, CountdownModule],
   providers: [
     { provide: CountdownGlobalConfig, useFactory: countdownConfigFactory },
+    TimerconfigService,
   ],
   bootstrap: [AppComponent],
 })

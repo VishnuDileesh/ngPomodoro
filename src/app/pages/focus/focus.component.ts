@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TimerconfigService } from 'src/app/timerconfig.service';
 
 @Component({
   selector: 'app-focus',
@@ -6,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./focus.component.css'],
 })
 export class FocusComponent implements OnInit {
-  time: number = 10 * 60;
-  timeConfig: any = {
-    leftTime: this.time,
-  };
+  time;
+  timeConfig: any;
 
-  constructor() {}
+  constructor(private timeConfigService: TimerconfigService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.time = this.timeConfigService.getFocusTime();
+    this.timeConfig = {
+      leftTime: this.time * 60,
+    };
+  }
 }
