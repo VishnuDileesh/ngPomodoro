@@ -1,0 +1,23 @@
+nav {
+  margin: 5rem 0;
+  width: 100%;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 0 0.5rem;
+}
+
+a {
+  padding: 1.5rem 2rem;
+  background-color: #f0b9cf;
+}
+
+a:hover {
+  color: #4b004c;
+}
