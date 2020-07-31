@@ -12,14 +12,29 @@ ul {
 }
 
 li {
-  margin: 0 0.5rem;
+  margin: 0 0.2rem;
 }
 
 a {
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1rem;
   background-color: #f0b9cf;
 }
 
 a:hover {
   color: #4b004c;
+}
+
+@media only screen and (min-width: 590px) {
+  li {
+    margin: 0 0.5rem;
+  }
+
+  a {
+    padding: 1.5rem 2rem;
+    background-color: #f0b9cf;
+  }
+
+  a:hover {
+    color: #4b004c;
+  }
 }
