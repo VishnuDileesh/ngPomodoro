@@ -60,6 +60,12 @@ input:focus {
   border: 1px solid #4b004c;
 }
 
+@media only screen and (max-width: 450px) {
+  .container {
+    width: 100%;
+  }
+}
+
 @media only screen and (min-width: 590px) {
   .count-down {
     font-size: 18rem;
