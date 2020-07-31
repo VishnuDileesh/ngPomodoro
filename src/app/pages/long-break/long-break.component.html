@@ -1,1 +1,5 @@
-<p>long-break works!</p>
+<countdown #longBreakTimer [config]="timeConfig"></countdown>
+<div class="controls">
+  <button (click)="longBreakTimer.resume()">Start</button>
+  <button (click)="longBreakTimer.restart()">Reset</button>
+</div>
