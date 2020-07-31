@@ -1,1 +1,5 @@
-<p>short-break works!</p>
+<countdown #shortBreakTimer [config]="timeConfig"></countdown>
+<div class="controls">
+  <button (click)="shortBreakTimer.resume()">Start</button>
+  <button (click)="shortBreakTimer.restart()">Reset</button>
+</div>
